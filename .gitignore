@@ -1,0 +1,9 @@
+build/
+*.bin
+*.userdb/
+*.userdb.kct
+*.userdb.txt
+*.userdb.db
+*.table.txt
+*.reverse.bin
+.DS_Store

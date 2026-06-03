@@ -1,0 +1,40 @@
+# Rime schema: Polytonic Greek (Mizuochi-style)
+# encoding: utf-8
+#
+# Letter layout: Standard Greek keyboard (ELOT 1260)
+# Diacritics: appended after letter (Mizuochi style)
+#   ' or Q = psili (smooth breathing)
+#   ` or q = dasia (rough breathing)
+#   / = oxia (acute)                ? = varia (grave)
+#   \ = perispomeni (circumflex)    ^ = perispomeni (alt)
+#   " = dialytika (diaeresis)       J = ypogegrammeni (subscript iota)
+#   bare q = ·                      bare Q = ;
+#   ;help = quick help
+
+schema:
+  schema_id: greek_mizuochi
+  name: 古希腊语
+  version: "0.9"
+
+engine:
+  processors:
+    - lua_processor@greek_mizuochi_auto_commit
+    - speller
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - abc_segmentor
+    - fallback_segmentor
+  translators:
+    - lua_translator@greek_mizuochi_translator
+
+speller:
+  alphabet: "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA'/`?^\\J\";"
+  delimiter: " "
+  max_code_length: 5
+
+translator:
+  dictionary: greek_mizuochi
+  enable_sentence: false
+  enable_user_dict: false
