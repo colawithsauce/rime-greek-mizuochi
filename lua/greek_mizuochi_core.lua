@@ -30,7 +30,7 @@ local function semantic_key(code)
 
 	for i = 2, #code do
 		local ch = code:sub(i, i)
-		if ch == "`" or ch == "q" then
+		if ch == '"' or ch == "q" then
 			if breath ~= "" then return nil end
 			breath = "rough"
 		elseif ch == "'" or ch == "Q" then
@@ -48,7 +48,7 @@ local function semantic_key(code)
 		elseif ch == "J" then
 			if iota then return nil end
 			iota = true
-		elseif ch == '"' then
+		elseif ch == ":" then
 			if diaeresis then return nil end
 			diaeresis = true
 		else

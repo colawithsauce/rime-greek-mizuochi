@@ -4,10 +4,10 @@
 # Letter layout: Standard Greek keyboard (ELOT 1260)
 # Diacritics: appended after letter (Mizuochi style)
 #   ' or Q = psili (smooth breathing)
-#   ` or q = dasia (rough breathing)
+#   " or q = dasia (rough breathing)
 #   / = oxia (acute)                ? = varia (grave)
 #   \ = perispomeni (circumflex)    ^ = perispomeni (alt)
-#   " = dialytika (diaeresis)       J = ypogegrammeni (subscript iota)
+#   : = dialytika (diaeresis)       J = ypogegrammeni (subscript iota)
 #   bare q = ·                      bare Q = ;
 #   ;help = quick help
 
@@ -30,7 +30,7 @@ engine:
     - lua_translator@greek_mizuochi_translator
 
 speller:
-  alphabet: "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA'/`?^\\J\";"
+  alphabet: "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA'/?^\\J\":;"
   delimiter: " "
   max_code_length: 5
 
