@@ -7,7 +7,7 @@
 #   " or q = dasia (rough breathing)
 #   / = oxia (acute)                ? = varia (grave)
 #   \ = perispomeni (circumflex)    ^ = perispomeni (alt)
-#   : = dialytika (diaeresis)       J = ypogegrammeni (subscript iota)
+#   ; = dialytika (diaeresis)       J = ypogegrammeni (subscript iota)
 #   bare q = ·                      bare Q = ;
 #   ;help = quick help
 
@@ -27,10 +27,10 @@ engine:
     - abc_segmentor
     - fallback_segmentor
   translators:
-    - lua_translator@greek_mizuochi_translator
+    - table_translator
 
 speller:
-  alphabet: "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA'/?^\\J\":;"
+  alphabet: "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA'/?^\\J\";"
   delimiter: " "
   max_code_length: 5
 

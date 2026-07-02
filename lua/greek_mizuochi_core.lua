@@ -48,7 +48,7 @@ local function semantic_key(code)
 		elseif ch == "J" then
 			if iota then return nil end
 			iota = true
-		elseif ch == ":" then
+		elseif ch == ";" then
 			if diaeresis then return nil end
 			diaeresis = true
 		else

@@ -20,17 +20,15 @@
 greek_mizuochi.schema.yaml
 greek_mizuochi.dict.yaml
 lua/greek_mizuochi_core.lua
-lua/greek_mizuochi_translator.lua
 lua/greek_mizuochi_auto_commit.lua
 ```
 
 如果你的 Rime 用户目录没有 `rime.lua`，也复制本仓库的 `rime.lua`。
 
-如果已经有 `rime.lua`，只需要把下面两行合并进去：
+如果已经有 `rime.lua`，只需要把下面这行合并进去：
 
 ```lua
 greek_mizuochi_auto_commit = require("greek_mizuochi_auto_commit")
-greek_mizuochi_translator = require("greek_mizuochi_translator")
 ```
 
 然后在 `default.custom.yaml` 或你的方案列表里加入：
@@ -63,7 +61,7 @@ patch:
 | `?` | 钝音 | `o?` -> `ὸ` |
 | `^` 或 `\` | 曲音 | `a^` -> `ᾶ` |
 | `J` | 下标 iota | `aJ` -> `ᾳ` |
-| `:` | 分音符 | `i:` -> `ϊ`, `y:` -> `ϋ` |
+| `;` | 分音符 | `i;` -> `ϊ`, `y;` -> `ϋ` |
 
 附加符号的顺序不固定：
 
